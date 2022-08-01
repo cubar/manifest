@@ -123,8 +123,11 @@ WSGI_APPLICATION = 'manifest.wsgi.application'
 DATABASES = {
         'default': {
             'ENGINE': 'django.db.backends.postgresql_psycopg2',
-            'NAME': 'manifestdb',
+            'NAME': 'manifest',
             'USER': 'manifest',
+            'PASSWORD': 'manifest',
+            'HOST': 'localhost',
+            'PORT': 5432,
         },
 }
 
