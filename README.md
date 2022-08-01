@@ -42,7 +42,7 @@ With this setup you will `pip install ...` your python libraries in `~/.virtuale
    [django-sass](https://github.com/coderedcorp/django-sass/).
 
 - Run the development server:<br>
-   `python manage.py runserver`
+   `python manage.py runserver` or, a bit shorter: `./manage.py runserver`
 
 - Go to `http://localhost:8000/` in your browser, or `http://localhost:8000/admin/` to log in and get to work!
 
