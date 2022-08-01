@@ -11,36 +11,25 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
-import environ
 import os
 
 PROJECT_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 BASE_DIR = os.path.dirname(PROJECT_DIR)
-
-# Set up environment variables
-env = environ.Env()
-environ.Env.read_env(os.path.join(BASE_DIR, '.env'))
-
-
-# Quick-start development settings - unsuitable for production
-# See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
-
 
 # Application definition
 
 INSTALLED_APPS = [
     # This project
     'website',
-    'storages',
 
     # CodeRed CMS
     'coderedcms',
     'bootstrap4',
     'modelcluster',
     'taggit',
-    'wagtailfontawesome',
+    #effe 'wagtailfontawesome',
     'wagtailcache',
-    'wagtailimportexport',
+    #effe 'wagtailimportexport',
     'wagtailseo',
 
     # Wagtail
@@ -84,7 +73,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'django.middleware.security.SecurityMiddleware',
 
-    'whitenoise.middleware.WhiteNoiseMiddleware',
+    #effe 'whitenoise.middleware.WhiteNoiseMiddleware', # to speed up static file serving
 
     # Error reporting. Uncomment this to receive emails when a 404 is triggered.
     #'django.middleware.common.BrokenLinkEmailsMiddleware',
@@ -206,13 +195,6 @@ BOOTSTRAP4 = {
     # remove green highlight on inputs
     'success_css_class': ''
 }
-
-# Storage
-AWS_STORAGE_BUCKET_NAME = 'manifest'
-AWS_ACCESS_KEY_ID = env('AWS_ACCESS_KEY_ID')
-AWS_SECRET_ACCESS_KEY = env('AWS_SECRET_ACCESS_KEY')
-AWS_S3_CUSTOM_DOMAIN = '%s.eu-central-1.linodeobjects.com/%s' % (AWS_STORAGE_BUCKET_NAME, AWS_STORAGE_BUCKET_NAME)
-AWS_S3_ENDPOINT_URL = 'https://%s.eu-central-1.linodeobjects.com/' % AWS_STORAGE_BUCKET_NAME
 
 # Tags
 
