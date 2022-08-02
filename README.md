@@ -20,7 +20,8 @@ Tip: You could use [retext](https://github.com/retext-project/retext) to make ch
 - - end your sql session: `exit` of `<C-D>` (which is the Linux eof character)
 - - end your session as postgres superuser: `exit` or eof (end-of-file character)
 
-- Install python3: `apt install python3 virtualenvwrapper`
+- Install git and python3:<br>
+`apt install git python3 virtualenvwrapper`
 - Add a line to the end of your bash startup file:<br>
 `echo 'source /usr/share/virtualenvwrapper/virtualenvwrapper.sh' >> ~/.bashrc`
 - - Prepare the way virtualwrapper will work for you (you will need to do this setup only once):
@@ -28,8 +29,11 @@ Tip: You could use [retext](https://github.com/retext-project/retext) to make ch
 - - - `echo 'mkdir -p $folder' >> ~/.virtualenvs/postactivate`
 - - - `echo 'cd $folder' >> ~/.virtualenvs/postactivate`
 
-- - Make a python virtual environment: `mkvirtualenv manifest`<br>
+- - Make a python virtual environment: `mkvirtualenv manifest` (This will probably fail because virtualwrapper has not started properly because you were installing it: log out and log in and try again.)<br>
 With this setup you will `pip install ...` your python libraries in `~/.virtualenvs` and your working folders in `~/py`.
+
+- - Clone the git repository from your current folder (~/py/manifest and still inside the manifest python environment:<br>
+`git clone git@github.com:communistische-partij-nederland/manifest.git .` (don't forget the dot at the end to use the current folder as the clone target rather then the default target folder which would be an extra subfolder `manifest` in this case.)
 
 - - Install the software, and the dev tooling:<br>
    `pip install -r requirements.txt -r requirements-dev.txt`
@@ -43,6 +47,10 @@ With this setup you will `pip install ...` your python libraries in `~/.virtuale
 
 - Run the development server:<br>
    `python manage.py runserver` or, a bit shorter: `./manage.py runserver`
+
+- you should see that you need to apply migrations, do that now:<br>
+Kill your development server by typing `<C-C>` and run migrations:<br>
+`./manage.py migrate` Then start your development server again.
 
 - Go to `http://localhost:8000/` in your browser, or `http://localhost:8000/admin/` to log in and get to work!
 
