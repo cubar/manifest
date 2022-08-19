@@ -11,28 +11,33 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
+import environ
 import os
 
-# SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'Only-for-development-ja2a8kjbpd*x&ffh9awd9+vc(sk$1%$%wd&br2e%u8wsfons4s'
+# Set up environment variables
+
 
 PROJECT_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 BASE_DIR = os.path.dirname(PROJECT_DIR)
+
+env = environ.Env()
+environ.Env.read_env(os.path.join(BASE_DIR, '.env'))
 
 # Application definition
 
 INSTALLED_APPS = [
     # This project
     'website',
+    'storages'
 
     # CodeRed CMS
     'coderedcms',
     'bootstrap4',
     'modelcluster',
     'taggit',
-    #effe 'wagtailfontawesome',
+    'wagtailfontawesome',
     'wagtailcache',
-    #effe 'wagtailimportexport',
+    'wagtailimportexport',
     'wagtailseo',
 
     # Wagtail
@@ -76,7 +81,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'django.middleware.security.SecurityMiddleware',
 
-    #effe 'whitenoise.middleware.WhiteNoiseMiddleware', # to speed up static file serving
+    'whitenoise.middleware.WhiteNoiseMiddleware', # to speed up static file serving
 
     # Error reporting. Uncomment this to receive emails when a 404 is triggered.
     #'django.middleware.common.BrokenLinkEmailsMiddleware',
@@ -115,7 +120,7 @@ WSGI_APPLICATION = 'manifest.wsgi.application'
 DATABASES = {
         'default': {
             'ENGINE': 'django.db.backends.postgresql_psycopg2',
-            'NAME': 'manifest',
+            'NAME': 'manifestdb',
             'USER': 'manifest',
             'PASSWORD': 'manifest',  # only for development
             'HOST': 'localhost',
@@ -202,6 +207,12 @@ BOOTSTRAP4 = {
 # Tags
 
 TAGGIT_CASE_INSENSITIVE = True
+
+AWS_STORAGE_BUCKET_NAME = 'manifest'
+AWS_ACCESS_KEY_ID = env('AWS_ACCESS_KEY_ID')
+AWS_SECRET_ACCESS_KEY = env('AWS_SECRET_ACCESS_KEY')
+AWS_S3_CUSTOM_DOMAIN = '%s.eu-central-1.linodeobjects.com/%s' % (AWS_STORAGE_BUCKET_NAME, AWS_STORAGE_BUCKET_NAME)
+AWS_S3_ENDPOINT_URL = 'https://%s.eu-central-1.linodeobjects.com/' % AWS_STORAGE_BUCKET_NAME
 
 
 # Sets default for primary key IDs
