@@ -3,6 +3,8 @@ from .base import *
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
+SECRET_KEY = env('SECRET_KEY')
+
 # Add your site's domain name(s) here.
 ALLOWED_HOSTS = ['manifest.ncpn.nl']
 
@@ -11,8 +13,8 @@ ALLOWED_HOSTS = ['manifest.ncpn.nl']
 # https://docs.djangoproject.com/en/3.2/ref/settings/#email-backend
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.ncpn.nl'
-EMAIL_HOST_USER = 'webdev@ncpn.nl'
-EMAIL_HOST_PASSWORD = 'the webdev password'
+EMAIL_HOST_USER = 'manifest@ncpn.nl'
+EMAIL_HOST_PASSWORD = env('EMAIL_HOST_PASSWORD')
 EMAIL_POST = 587
 EMAIL_USE_TLS = True
 
@@ -53,6 +55,14 @@ TEMPLATES = [
         },
     },
 ]
+
+DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.postgresql_psycopg2',
+            'NAME': 'manifestdb',
+            'USER': 'manifest',
+        },
+}
 
 CACHES = {
     'default': {
