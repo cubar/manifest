@@ -19,6 +19,11 @@ The command used to create the policy is:
 
 s3cmd setlifecycle lifecycle_policy.xml s3://example-bucket
 
-Make sure to first bootstrap the `s3cmd` using this:
+Make sure to first install `s3cmd` and then bootstrap it using this:
 
 s3cmd --configure
+
+## Deploy the crontab configuration
+
+To "deploy" the backup job just edit the crontab configuration and copy the content of
+the crontab file in this folder. The command to edit the crontab is `crontab -e`.
