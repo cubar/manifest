@@ -8,11 +8,17 @@ https://docs.djangoproject.com/en/3.2/howto/deployment/wsgi/
 """
 
 import os
+import environ
 
 from django.core.wsgi import get_wsgi_application
 
+PROJECT_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+BASE_DIR = os.path.dirname(PROJECT_DIR)
 
-os.environ.setdefault("DJANGO_SETTINGS_MODULE", "manifest.settings.prod")
+env = environ.Env()
+environ.Env.read_env(os.path.join(BASE_DIR, '.env'))
+
+os.environ.setdefault("DJANGO_SETTINGS_MODULE", "manifest.settings.%s" % (env('ENV_VALUE')) )
 
 application = get_wsgi_application()
 

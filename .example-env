@@ -1,0 +1,9 @@
+ENV_VALUE='dev'
+SECRET_KEY='place SECRET_KEY here'
+EMAIL_HOST_PASSWORD='password to email so that application can send emails'
+AWS_ACCESS_KEY_ID='access key for linode object storage'
+AWS_SECRET_ACCESS_KEY='secret access key for linode object storage'
+
+# this is an example env file that contains all the secret keys you need to get the application running locally. 
+# When doing so, create a file called '.env' locally and fill it in with the actual values.
+# this is so that secrets are not commited to a git repo, as .env is in the .gitignore.
