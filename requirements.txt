@@ -47,7 +47,6 @@ telepath==0.2
 urllib3==1.26.11
 wagtail==2.16.2
 wagtail-cache==1.2.0
-wagtail-import-export==0.2
 wagtail-seo==1.0.2
 wagtailfontawesome==1.2.1
 webencodings==0.5.1
