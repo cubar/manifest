@@ -161,16 +161,16 @@ USE_L10N = True
 USE_TZ = True
 
 
-#chuck # Static files (CSS, JavaScript, Images)
-#chuck # https://docs.djangoproject.com/en/3.2/howto/static-files/
+# Static files (CSS, JavaScript, Images)
+# https://docs.djangoproject.com/en/3.2/howto/static-files/
 
-#chuck STATICFILES_FINDERS = [
-#chuck     'django.contrib.staticfiles.finders.FileSystemFinder',
-#chuck     'django.contrib.staticfiles.finders.AppDirectoriesFinder',
-#chuck ]
-#chuck
-#chuck STATIC_ROOT = os.path.join(BASE_DIR, 'static')
-#chuck STATIC_URL = '/static/'
+STATICFILES_FINDERS = [
+    'django.contrib.staticfiles.finders.FileSystemFinder',
+    'django.contrib.staticfiles.finders.AppDirectoriesFinder',
+]
+
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+STATIC_URL = '/static/'
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
