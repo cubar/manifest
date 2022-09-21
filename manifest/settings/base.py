@@ -37,7 +37,6 @@ INSTALLED_APPS = [
     'taggit',
     'wagtailfontawesome',
     'wagtailcache',
-    'wagtailimportexport',
     'wagtailseo',
 
     # Wagtail
