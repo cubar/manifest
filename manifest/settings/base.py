@@ -28,7 +28,7 @@ environ.Env.read_env(os.path.join(BASE_DIR, '.env'))
 INSTALLED_APPS = [
     # This project
     'website',
-    'storages'
+    'storages',
 
     # CodeRed CMS
     'coderedcms',
