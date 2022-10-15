@@ -1,9 +1,12 @@
+from manifest.manifest.settings.prod import SECRET_KEY
 from .base import *
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
 ALLOWED_HOSTS = ['*']
+
+SECRET_KEY = 'dev'
 
 INSTALLED_APPS += ['django_sass',]
 
