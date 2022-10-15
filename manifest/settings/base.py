@@ -32,6 +32,7 @@ INSTALLED_APPS = [
 
     # CodeRed CMS
     'coderedcms',
+    'django_bootstrap5',
     'modelcluster',
     'taggit',
     'wagtailfontawesome',
@@ -62,7 +63,6 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django.contrib.sitemaps',
-    'django_bootstrap5',
 ]
 
 MIDDLEWARE = [
@@ -187,6 +187,13 @@ LOGIN_REDIRECT_URL = 'wagtailadmin_home'
 WAGTAIL_SITE_NAME = "Manifest, krant van de NCPN"
 
 WAGTAIL_ENABLE_UPDATE_CHECK = False
+
+WAGTAILSEARCH_BACKENDS = {
+    "default": {
+        "BACKEND": "wagtail.search.backends.database",
+    }
+}
+
 
 # Base URL to use when referring to full URLs within the Wagtail admin backend -
 # e.g. in notification emails. Don't include '/admin' or a trailing slash
