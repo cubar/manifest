@@ -19,22 +19,22 @@
 ///
 /// See: https://getbootstrap.com/docs/5.2/customize/color/
 
-$primary:       $blue;
-$secondary:     $gray-600;
-$success:       $green;
-$info:          $cyan;
-$warning:       $yellow;
-$danger:        $red;
-$light:         $gray-100;
-$dark:          $gray-900;
+$primary:       #dd0000;
+// $secondary:     $gray-600;
+// $success:       $green;
+// $info:          $cyan;
+// $warning:       $yellow;
+// $danger:        $red;
+// $light:         $gray-100;
+// $dark:          $gray-900;
 
 
 /// Body
 ///
 /// Settings for the `<body>` element.
 
-$body-bg:                   $white;
-$body-color:                $gray-900;
+// $body-bg:                   $white;
+// $body-color:                $gray-900;
 
 
 /// Typography
@@ -42,21 +42,21 @@ $body-color:                $gray-900;
 /// Font, line-height, and color for body text, headings, and more.
 
 // Body fonts.
-$font-family-base:            null;
-$font-size-base:              1rem;
-$font-weight-light:           300;
-$font-weight-normal:          400;
-$font-weight-semibold:        600;
-$font-weight-bold:            700;
-$font-weight-base:            $font-weight-normal;
+// $font-family-base:            null;
+// $font-size-base:              1rem;
+// $font-weight-light:           300;
+// $font-weight-normal:          400;
+// $font-weight-semibold:        600;
+// $font-weight-bold:            700;
+// $font-weight-base:            $font-weight-normal;
 
-// Headings
-$headings-font-family:        null;
-$headings-font-weight:        500;
-$headings-color:              null;
-$h1-font-size:                $font-size-base * 2.5;
-$h2-font-size:                $font-size-base * 2;
-$h3-font-size:                $font-size-base * 1.75;
-$h4-font-size:                $font-size-base * 1.5;
-$h5-font-size:                $font-size-base * 1.25;
-$h6-font-size:                $font-size-base;
+// // Headings
+// $headings-font-family:        null;
+// $headings-font-weight:        500;
+// $headings-color:              null;
+// $h1-font-size:                $font-size-base * 2.5;
+// $h2-font-size:                $font-size-base * 2;
+// $h3-font-size:                $font-size-base * 1.75;
+// $h4-font-size:                $font-size-base * 1.5;
+// $h5-font-size:                $font-size-base * 1.25;
+// $h6-font-size:                $font-size-base;
