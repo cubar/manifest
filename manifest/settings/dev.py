@@ -1,4 +1,3 @@
-from manifest.manifest.settings.prod import SECRET_KEY
 from .base import *
 
 # SECURITY WARNING: don't run with debug turned on in production!
