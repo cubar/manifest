@@ -200,46 +200,46 @@ License: https://github.com/coderedcorp/coderedcms/blob/dev/LICENSE
 
 /* Custom */
 
-.codered-collapsible {
+.crx-collapsible {
     padding:0;
 }
 
-.codered-collapsible .codered-collapsible-target {
+.crx-collapsible .crx-collapsible-target {
     padding: 10px 0 0;
 }
 
-.codered-checkbox-group {
+.crx-checkbox-group {
     margin-bottom: 1em;
 }
-.codered-checkbox-group ul {
+.crx-checkbox-group ul {
     margin-top: 0.5em;
 }
-.codered-checkbox-group label {
+.crx-checkbox-group label {
     padding-bottom: 0.25em;
 }
-.codered-checkbox-group label input {
+.crx-checkbox-group label input {
     margin-right: 0.25em;
 }
 
-.codered-callout {
+.crx-callout {
     background-color: #f0f1f2;
     border-radius: 6px;
     display: inline-block;
     padding: 2em 3em;
     text-align: center;
 }
-.codered-callout .codered-big-icon {
+.crx-callout .crx-big-icon {
     font-size: 10rem;
     color: rgba(0,0,0,0.1);
 }
-.codered-callout h3 {
+.crx-callout h3 {
     font-size: 1.2rem;
     font-weight: 600;
 }
-.codered-callout p {
+.crx-callout p {
     font-size: 1rem;
 }
-.codered-callout .codered-new {
+.crx-callout .crx-new {
     border-radius: 4px;
     background-color: rgba(0,0,0,0.1);
     font-size: 0.6em;

@@ -138,7 +138,7 @@ input[type='checkbox']::before, input[type='radio']::before {
     }
 
     /* Fields for page editor forms */
-    li.codered-collapsible label+.field,
+    li.crx-collapsible label+.field,
     body:not(.login) ul.fields > li:not(.label-above) label+.field-content,
     body:not(.login) ul.fields > li:not(.label-above) label+.field {
         display:block;
@@ -222,24 +222,24 @@ input[type='checkbox']::before, input[type='radio']::before {
     padding: 1em;
     margin-bottom: 1em;
 }
-.logo img.codered-logo-custom {
+.logo img.crx-logo-custom {
     width:auto;
     height:auto;
     max-height:80px;
     max-width:100%;
 }
-.codered-logo-container {
+.crx-logo-container {
     box-sizing: border-box;
     padding-top: 1em;
     padding-bottom: 1em;
 }
-.codered-logo-container.navbar-light {
+.crx-logo-container.navbar-light {
     background-color: #f1f1f1;
     border-radius: 6px;
     padding-left: 1em;
     padding-right: 1em;
 }
-.codered-logo-container.navbar-dark {
+.crx-logo-container.navbar-dark {
     background-color: transparent;
 }
 

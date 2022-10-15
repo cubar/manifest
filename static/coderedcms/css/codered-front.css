@@ -81,38 +81,38 @@ License: https://github.com/coderedcorp/coderedcms/blob/dev/LICENSE
 }
 
 #content,
-.codered-article,
-.codered-article .container {
+.crx-article,
+.crx-article .container {
   background-color: inherit;
 }
 
-.codered-article .container {
+.crx-article .container {
   margin-bottom: 50px;
 }
 
-.codered-article .article-body {
+.crx-article .article-body {
   margin-top: 3em;
   padding-bottom: 1em;
 }
 
 @media (min-width: 768px) {
-  .codered-article .article-body {
+  .crx-article .article-body {
     font-size: 1.2em;
   }
 }
 
-.codered-article .article-author-img {
+.crx-article .article-author-img {
   max-height: 3em;
 }
 
 @media (min-width: 768px) {
-  .codered-article > img {
+  .crx-article > img {
     margin-bottom: -15vw;
   }
 }
 
 @media (min-width: 768px) {
-  .codered-article.has-img .container {
+  .crx-article.has-img .container {
     position: relative;
     padding: 5vw;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
@@ -238,83 +238,83 @@ License: https://github.com/coderedcorp/coderedcms/blob/dev/LICENSE
   margin-top: 56px;
 }
 
-.codered-navbar-center-fixed-img-offset {
+.crx-navbar-center-fixed-img-offset {
   margin-top: 175px;
 }
 
-.codered-navbar-center-fixed-offset {
+.crx-navbar-center-fixed-offset {
   margin-top: 56px;
 }
 
-.codered-navbar-center {
+.crx-navbar-center {
   text-align: center;
 }
 
-.codered-navbar-center .navbar-collapse {
+.crx-navbar-center .navbar-collapse {
   justify-content: center;
 }
 
-.codered-navbar-center .navbar-brand {
+.crx-navbar-center .navbar-brand {
   margin: 0;
 }
 
-.codered-navbar-center .navbar-brand img {
+.crx-navbar-center .navbar-brand img {
   height: 150px;
   width: auto;
 }
 
 /* sm */
 @media (min-width: 576px) {
-  .codered-navbar-center.navbar-expand-sm > .container,
-  .codered-navbar-center.navbar-expand-sm > .container-fluid {
+  .crx-navbar-center.navbar-expand-sm > .container,
+  .crx-navbar-center.navbar-expand-sm > .container-fluid {
     display: block;
   }
-  .codered-navbar-center-fixed-img-offset.navbar-expand-sm {
+  .crx-navbar-center-fixed-img-offset.navbar-expand-sm {
     margin-top: 217px;
   }
-  .codered-navbar-center-fixed-offset.navbar-expand-sm {
+  .crx-navbar-center-fixed-offset.navbar-expand-sm {
     margin-top: 96px;
   }
 }
 
 /* md */
 @media (min-width: 768px) {
-  .codered-navbar-center.navbar-expand-md > .container,
-  .codered-navbar-center.navbar-expand-md > .container-fluid {
+  .crx-navbar-center.navbar-expand-md > .container,
+  .crx-navbar-center.navbar-expand-md > .container-fluid {
     display: block;
   }
-  .codered-navbar-center-fixed-img-offset.navbar-expand-md {
+  .crx-navbar-center-fixed-img-offset.navbar-expand-md {
     margin-top: 217px;
   }
-  .codered-navbar-center-fixed-offset.navbar-expand-md {
+  .crx-navbar-center-fixed-offset.navbar-expand-md {
     margin-top: 96px;
   }
 }
 
 /* lg */
 @media (min-width: 992px) {
-  .codered-navbar-center.navbar-expand-lg > .container,
-  .codered-navbar-center.navbar-expand-lg > .container-fluid {
+  .crx-navbar-center.navbar-expand-lg > .container,
+  .crx-navbar-center.navbar-expand-lg > .container-fluid {
     display: block;
   }
-  .codered-navbar-center-fixed-img-offset.navbar-expand-sm {
+  .crx-navbar-center-fixed-img-offset.navbar-expand-sm {
     margin-top: 217px;
   }
-  .codered-navbar-center-fixed-offset.navbar-expand-sm {
+  .crx-navbar-center-fixed-offset.navbar-expand-sm {
     margin-top: 96px;
   }
 }
 
 /* xl */
 @media (min-width: 1200px) {
-  .codered-navbar-center.navbar-expand-xl > .container,
-  .codered-navbar-center.navbar-expand-xl > .container-fluid {
+  .crx-navbar-center.navbar-expand-xl > .container,
+  .crx-navbar-center.navbar-expand-xl > .container-fluid {
     display: block;
   }
-  .codered-navbar-center-fixed-img-offset.navbar-expand-xl {
+  .crx-navbar-center-fixed-img-offset.navbar-expand-xl {
     margin-top: 217px;
   }
-  .codered-navbar-center-fixed-offset.navbar-expand-xl {
+  .crx-navbar-center-fixed-offset.navbar-expand-xl {
     margin-top: 96px;
   }
 }
@@ -338,4 +338,4 @@ License: https://github.com/coderedcorp/coderedcms/blob/dev/LICENSE
   height: 500px;
 }
 
-/*# sourceMappingURL=codered-front.css.map */
+/*# sourceMappingURL=crx-front.css.map */
