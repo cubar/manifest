@@ -8,25 +8,25 @@ License: https://github.com/coderedcorp/coderedcms/blob/dev/LICENSE
 */
 
 // Hero unit block
-@import "codered-hero";
+@import "crx-hero";
 
 // Rich text block
-@import "codered-richtext";
+@import "crx-richtext";
 
 // Image gallery block
-@import "codered-gallery";
+@import "crx-gallery";
 
 // Pricelist block
-@import "codered-pricelist";
+@import "crx-pricelist";
 
 // Article pages
-@import "codered-article";
+@import "crx-article";
 
 // Location pages / store locator map
-@import "codered-location";
+@import "crx-location";
 
 // Navbar
-@import "codered-navbar";
+@import "crx-navbar";
 
 // Bootstrap 4 overrides to work better with coderedcms markup
-@import "codered-bs-overrides";
+@import "crx-bs-overrides";

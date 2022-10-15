@@ -32,7 +32,6 @@ INSTALLED_APPS = [
 
     # CodeRed CMS
     'coderedcms',
-    'bootstrap4',
     'modelcluster',
     'taggit',
     'wagtailfontawesome',
@@ -62,7 +61,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    "django.contrib.sitemaps",
+    'django.contrib.sitemaps',
+    'django_bootstrap5',
 ]
 
 MIDDLEWARE = [
@@ -190,18 +190,7 @@ WAGTAIL_ENABLE_UPDATE_CHECK = False
 
 # Base URL to use when referring to full URLs within the Wagtail admin backend -
 # e.g. in notification emails. Don't include '/admin' or a trailing slash
-BASE_URL = 'http://manifest.ncpn.nl'
-
-
-# Bootstrap
-
-BOOTSTRAP4 = {
-    # set to blank since coderedcms already loads jquery and bootstrap
-    'jquery_url': '',
-    'base_url': '',
-    # remove green highlight on inputs
-    'success_css_class': ''
-}
+WAGTAILADMIN_BASE_URL = 'http://manifest.ncpn.nl'
 
 # Tags
 
