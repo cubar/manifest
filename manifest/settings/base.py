@@ -197,11 +197,11 @@ WAGTAILADMIN_BASE_URL = 'http://manifest.ncpn.nl'
 
 TAGGIT_CASE_INSENSITIVE = True
 
-AWS_STORAGE_BUCKET_NAME = 'manifest'
+AWS_STORAGE_BUCKET_NAME = 'images.manifest.ncpn.nl'
 AWS_ACCESS_KEY_ID = env('AWS_ACCESS_KEY_ID')
 AWS_SECRET_ACCESS_KEY = env('AWS_SECRET_ACCESS_KEY')
-AWS_S3_CUSTOM_DOMAIN = '%s.eu-central-1.linodeobjects.com/%s' % (AWS_STORAGE_BUCKET_NAME, AWS_STORAGE_BUCKET_NAME)
-AWS_S3_ENDPOINT_URL = 'https://%s.eu-central-1.linodeobjects.com/' % AWS_STORAGE_BUCKET_NAME
+AWS_S3_CUSTOM_DOMAIN = '%s/%s' % (AWS_STORAGE_BUCKET_NAME, AWS_STORAGE_BUCKET_NAME)
+AWS_S3_ENDPOINT_URL = 'https://%s/' % AWS_STORAGE_BUCKET_NAME
 
 
 # Sets default for primary key IDs
