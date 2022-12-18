@@ -54,6 +54,27 @@ Kill your development server by typing `<C-C>` and run migrations:<br>
 
 - Go to `http://localhost:8000/` in your browser, or `http://localhost:8000/admin/` to log in and get to work!
 
+## How to get static files compiled properly
+
+First, get into the virtual environment
+```
+source venv/bin/activate
+```
+
+Then, install all requirements:
+```
+ pip install -r requirements.txt
+```
+
+Compile sass code
+```
+python manage.py sass website/static/website/src/custom.scss website/static/website/css/custom.css
+```
+
+Collect all static files
+```
+python manage.py collectstatic
+```
 
 ## Documentation links
 
