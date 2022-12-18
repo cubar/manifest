@@ -297,6 +297,9 @@ ENV/
 env.bak/
 venv.bak/
 
+# Local static files collected through collectstatic
+/static
+
 # Spyder project settings
 .spyderproject
 .spyproject
