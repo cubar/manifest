@@ -300,6 +300,9 @@ venv.bak/
 # Local static files collected through collectstatic
 /static
 
+# Local css
+/website/static/website/css/custom.css
+
 # Spyder project settings
 .spyderproject
 .spyproject
@@ -401,3 +404,4 @@ protected/
 media/
 #media/images/
 static/
+
