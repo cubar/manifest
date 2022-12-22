@@ -1,0 +1,8 @@
+# Schedules three jobs in the crontab, the first takes the postgres dump, the second
+# sends the dump to the object store, and the third removes the backup file from
+# the filesystem.
+0 23 * * * pg_dump -U manifest manifestdb > ~/backups/manifest_`date +"\%d_\%m_\%Y"`.bak
+15 23 * * * s3cmd put ~/backups/manifest_`date +"\%d_\%m_\%Y"`.bak s3://manifest-backups
+30 23 * * * rm ~/backups/manifest_`date +"\%d_\%m_\%Y"`.bak
+# You need an empty line at the end of crontab or the cron daemon ignores it
+
