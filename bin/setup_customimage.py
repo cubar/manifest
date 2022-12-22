@@ -282,6 +282,8 @@ Background:
 
 Requirements:
 - Stop all programs that access the database {DATABASE}
+- Activate your virtualenv
+- Change directories to the project folder.
 - All migrations done
 - pg_dump of the database in {ORG_PG_DUMP}
 - check existance of the coderedcms migration file
