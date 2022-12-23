@@ -1,0 +1,13 @@
+<!-- XML used to configure the rotation of dumps stored in the object store -->
+<LifecycleConfiguration>
+    <Rule>
+        <ID>delete-old-objects</ID>
+        <Filter>
+        <Prefix></Prefix>
+        </Filter>
+        <Status>Enabled</Status>
+        <Expiration>
+            <Days>5</Days>
+        </Expiration>
+    </Rule>
+</LifecycleConfiguration>
