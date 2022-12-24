@@ -17,12 +17,15 @@
   </div>
 </a>
 {% elif forloop.counter == 2 or forloop.counter == 3 or forloop.counter == 4 or forloop.counter == 5 %}
+
 {% if article.cover_image %}
 {% image article.cover_image fill-800x450 format-webp as cover_image %}
 {% endif %}
+
 {% if forloop.counter == 2 %}
 <div class="row">
 {% endif %}
+
   <div class="col-md-3">
     <a href="{{article.url}}">
       <img class="img-fluid" src="{{cover_image.url}}" alt="{{cover_image.title}}">
@@ -32,31 +35,14 @@
       {% endif %}
     </a>
   </div>
+
 {% if forloop.counter == 5 %}
 </div>
 {% endif%}
+
 {% else %}
 
 {% endif %}
 {% endwith %}
 {% endfor %}
 {% endblock %}
-
-
-
-<!-- <div class="d-flex">
-  {% if article.cover_image %}
-  <div class="flex-shrink-0">
-    {% image article.cover_image fill-800x450 format-webp as cover_image %}
-    <a href="{{article.url}}"><img class="me-3" src="{{cover_image.url}}" alt="{{cover_image.title}}"></a>
-  </div>
-  {% endif %}
-  <div class="flex-grow-1 ms-3">
-    <h5 class="mt-0"><a href="{{article.url}}">{{article.title}}</a></h5>
-    <div class="card-subtitle mb-2 text-muted">{{article.seo_published_at}} &bull; {{article.seo_author}}</div>
-    <div class="card-subtitle mb-2 text-muted">{{article.caption}}</div>
-    {% if self.show_preview %}
-    <p>{{article.body_preview}}</p>
-    {% endif %}
-  </div>
-</div> -->
