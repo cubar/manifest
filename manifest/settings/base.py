@@ -317,7 +317,11 @@ CRX_FRONTEND_TEMPLATES_BLOCKS = {
             ),
             (
                 "website/blocks/pagelist_newsstream.html",
-                "News stream block for Manifest home page"
+                "News stream block for Manifest home page",
+            ),
+            (
+                "website/blocks/pagelist_frontpagetopic_left.html",
+                "Specific topic block for Manifest home page",
             ),
         ],
         "pagepreviewblock": [

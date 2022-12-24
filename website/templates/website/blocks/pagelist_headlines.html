@@ -12,7 +12,7 @@
     style="background-image:url({{cover_image.url}});background-position: center;background-size: cover;">
     <div class="col-6 px-0">
       <h1 class="display-4">{{article.title}}</h1>
-      <p class="lead my-3">{{article.caption}}</p>
+      <p class="lead">{{article.caption}}</p>
     </div>
   </div>
 </a>
@@ -31,7 +31,7 @@
       <img class="img-fluid" src="{{cover_image.url}}" alt="{{cover_image.title}}">
       <h4>{{article.title}}</h3>
       {% if article.caption %}
-      <p class="lead my-3">{{article.caption}}</p>
+      <p class="lead">{{article.caption}}</p>
       {% endif %}
     </a>
   </div>

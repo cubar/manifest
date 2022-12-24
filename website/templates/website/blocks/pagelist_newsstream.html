@@ -3,13 +3,12 @@
 {% block block_render %}
 <div class="latest-articles-timeline">
   {% for page in pages %}
-  {% with page=page.specific %}
+  {% with page.specific as article %}
   <article>
     <a href="{% pageurl page %}">
-      <div class="title">{{page.title}}</h1>
+      <div class="title">{{article.title}}</h1>
       <!-- <p>{{page.caption}}</p> -->
-      <div class="date-published">{{page.seo_published_at}}</div>
-      <div>{{page.classifier_terms.1.slug}}</div>
+      <div class="date-published">{{article.seo_published_at}}</div>
     </a>
   </article>
   {% endwith %}
