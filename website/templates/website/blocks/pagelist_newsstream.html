@@ -1,0 +1,17 @@
+{% extends "coderedcms/blocks/base_block.html" %}
+{% load wagtailcore_tags %}
+{% block block_render %}
+<div class="latest-articles-timeline">
+  {% for page in pages %}
+  {% with page.specific as article %}
+  <article>
+    <a href="{% pageurl page %}">
+      <div class="title">{{article.title}}</h1>
+      <!-- <p>{{page.caption}}</p> -->
+      <div class="date-published">{{article.seo_published_at}}</div>
+    </a>
+  </article>
+  {% endwith %}
+  {% endfor %}
+</div>
+{% endblock %}

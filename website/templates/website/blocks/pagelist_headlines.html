@@ -1,0 +1,48 @@
+{% extends "coderedcms/blocks/base_block.html" %}
+{% load wagtailcore_tags wagtailimages_tags %}
+{% block block_render %}
+{% for page in pages %}
+{% with page.specific as article %}
+{% if forloop.counter == 1 %}
+{% if article.cover_image %}
+{% image article.cover_image fill-1366x768 format-webp as cover_image %}
+{% endif %}
+<a href="{{article.url}}">
+  <div class="p-4 p-md-5 mb-4 ar-16-9"
+    style="background-image:url({{cover_image.url}});background-position: center;background-size: cover;">
+    <div class="col-6 px-0">
+      <h1 class="display-4">{{article.title}}</h1>
+      <p class="lead">{{article.caption}}</p>
+    </div>
+  </div>
+</a>
+{% elif forloop.counter == 2 or forloop.counter == 3 or forloop.counter == 4 or forloop.counter == 5 %}
+
+{% if article.cover_image %}
+{% image article.cover_image fill-800x450 format-webp as cover_image %}
+{% endif %}
+
+{% if forloop.counter == 2 %}
+<div class="row">
+{% endif %}
+
+  <div class="col-md-3">
+    <a href="{{article.url}}">
+      <img class="img-fluid" src="{{cover_image.url}}" alt="{{cover_image.title}}">
+      <h4>{{article.title}}</h3>
+      {% if article.caption %}
+      <p class="lead">{{article.caption}}</p>
+      {% endif %}
+    </a>
+  </div>
+
+{% if forloop.counter == 5 %}
+</div>
+{% endif%}
+
+{% else %}
+
+{% endif %}
+{% endwith %}
+{% endfor %}
+{% endblock %}

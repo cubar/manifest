@@ -297,6 +297,12 @@ ENV/
 env.bak/
 venv.bak/
 
+# Local static files collected through collectstatic
+/static
+
+# Local css
+/website/static/website/css/custom.css
+
 # Spyder project settings
 .spyderproject
 .spyproject
@@ -397,4 +403,5 @@ protected/
 # replace "media/" with "media/images/"
 media/
 #media/images/
-static/
+/static/
+

@@ -1,0 +1,73 @@
+{% extends "coderedcms/blocks/base_block.html" %}
+{% load wagtailcore_tags wagtailimages_tags %}
+{% block block_render %}
+{% with pages.0.specific as first_article %}
+{% image first_article.cover_image fill-800x450 format-webp as first_cover_image %}
+{% with pages.1.specific as second_article %}
+{% image second_article.cover_image fill-800x450 format-webp as second_cover_image %}
+{% with pages.2.specific as third_article %}
+{% image third_article.cover_image fill-800x450 format-webp as third_cover_image %}
+{% with pages.3.specific as fourth_article %}
+{% image fourth_article.cover_image fill-800x450 format-webp as fourth_cover_image %}
+
+<div class="row">
+    <div class="col-md-6">
+        <a href="{{first_article.url}}">
+            <article>
+                <img class="img-fluid" src="{{first_cover_image.url}}" alt="{{first_cover_image.title}}">
+                <div class="topic_title">{{first_article.title}}</div>
+                <div class="topic_caption">{{first_article.caption}}</div>
+            </article>
+        </a>
+    </div>
+    <!-- <div class="vr"></div> -->
+    <div class="col-md-6">
+        <a href="{{second_article.url}}">
+            <article>
+                <div class="row mb-4">
+                    <div class="col-4 order-md-2">
+                        <img class="img-fluid" src="{{second_cover_image.url}}" alt="{{second_cover_image.title}}">
+                    </div>
+                    <div class="col-8 order-md-1">
+                        <div class="topic_title">{{second_article.title}}</div>
+                        <div class="topic_caption">{{second_article.caption}}</div>
+                    </div>
+                </div>
+            </article>
+        </a>
+        <hr>
+        <a href="{{third_article.url}}">
+            <article>
+                <div class="row mb-4">
+                    <div class="col-4 order-md-2">
+                        <img class="img-fluid" src="{{third_cover_image.url}}" alt="{{third_cover_image.title}}">
+                    </div>
+                    <div class="col-8 order-md-1">
+                        <div class="topic_title">{{third_article.title}}</div>
+                        <div class="topic_caption">{{third_article.caption}}</div>
+                    </div>
+                </div>
+            </article>
+        </a>
+        <hr>
+        <a href="{{fourth_article.url}}">
+            <article>
+                <div class="row mb-4">
+                    <div class="col-4 order-md-2">
+                        <img class="img-fluid" src="{{fourth_cover_image.url}}" alt="{{fourth_cover_image.title}}">
+                    </div>
+                    <div class="col-8 order-md-1">
+                        <div class="topic_title">{{fourth_article.title}}</div>
+                        <div class="topic_caption">{{fourth_article.caption}}</div>
+                    </div>
+                </div>
+            </article>
+        </a>
+
+    </div>
+</div>
+{% endwith %}
+{% endwith %}
+{% endwith %}
+{% endwith %}
+{% endblock %}

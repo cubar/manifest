@@ -120,10 +120,7 @@ DATABASES = {
         'default': {
             'ENGINE': 'django.db.backends.postgresql_psycopg2',
             'NAME': 'manifestdb',
-            'USER': 'manifest',
-            'PASSWORD': 'manifest',  # only for development
-            'HOST': 'localhost',
-            'PORT': 5432,
+            'USER': 'manifest'
         },
 }
 
@@ -246,3 +243,100 @@ LOGGING = {
       },
   },
 }
+
+# It is necesary to add all of these blocks in a list if you want to add your own custom one as described in github issue: https://github.com/coderedcorp/coderedcms/issues/530
+CRX_FRONTEND_TEMPLATES_BLOCKS = {
+        "cardblock": [
+            (
+                "coderedcms/blocks/card_block.html",
+                "Card",
+            ),
+            (
+                "coderedcms/blocks/card_head.html",
+                "Card with header",
+            ),
+            (
+                "coderedcms/blocks/card_foot.html",
+                "Card with footer",
+            ),
+            (
+                "coderedcms/blocks/card_head_foot.html",
+                "Card with header and footer",
+            ),
+            (
+                "coderedcms/blocks/card_blurb.html",
+                "Blurb - rounded image and no border",
+            ),
+            (
+                "coderedcms/blocks/card_img.html",
+                "Cover image - use image as background",
+            ),
+        ],
+        "cardgridblock": [
+            (
+                "coderedcms/blocks/cardgrid_group.html",
+                "Card group - attached cards of equal size",
+            ),
+            (
+                "coderedcms/blocks/cardgrid_deck.html",
+                "Card deck - separate cards of equal size",
+            ),
+            (
+                "coderedcms/blocks/cardgrid_columns.html",
+                "Card masonry - fluid brick pattern",
+            ),
+        ],
+        "pagelistblock": [
+            (
+                "coderedcms/blocks/pagelist_block.html",
+                "General, simple list",
+            ),
+            (
+                "coderedcms/blocks/pagelist_list_group.html",
+                "General, list group navigation panel",
+            ),
+            (
+                "coderedcms/blocks/pagelist_article_media.html",
+                "Article, media format",
+            ),
+            (
+                "coderedcms/blocks/pagelist_article_card_group.html",
+                "Article, card group - attached cards of equal size",
+            ),
+            (
+                "coderedcms/blocks/pagelist_article_card_deck.html",
+                "Article, card deck - separate cards of equal size",
+            ),
+            (
+                "coderedcms/blocks/pagelist_article_card_columns.html",
+                "Article, card masonry - fluid brick pattern",
+            ),
+            (
+                "website/blocks/pagelist_headlines.html",
+                "Headlines block for Manifest home page",
+            ),
+            (
+                "website/blocks/pagelist_newsstream.html",
+                "News stream block for Manifest home page",
+            ),
+            (
+                "website/blocks/pagelist_frontpagetopic_left.html",
+                "Specific topic block for Manifest home page",
+            ),
+        ],
+        "pagepreviewblock": [
+            (
+                "coderedcms/blocks/pagepreview_card.html",
+                "Card",
+            ),
+            (
+                "coderedcms/blocks/pagepreview_form.html",
+                "Form inputs",
+            ),
+        ],
+        # templates that are available for all block types
+        "*": [
+            ("", "Default"),
+        ],
+    }
+
