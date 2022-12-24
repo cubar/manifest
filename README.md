@@ -91,6 +91,11 @@ Collect all static files
 python3 manage.py collectstatic
 ```
 
+Restart python
+```
+sudo systemctl restart uwsgi
+```
+
 ## Documentation links
 
 * To customize the content, design, and features of the site see
