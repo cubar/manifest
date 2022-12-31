@@ -29,6 +29,7 @@ INSTALLED_APPS = [
     # This project
     'website',
     'storages',
+    'images',
 
     # CodeRed CMS
     'coderedcms',
@@ -341,3 +342,4 @@ CRX_FRONTEND_TEMPLATES_BLOCKS = {
         ("", "Default"),
     ],
 }
+WAGTAILIMAGES_IMAGE_MODEL = 'images.CustomImage'
