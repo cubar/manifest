@@ -57,11 +57,11 @@ TEMPLATES = [
 ]
 
 DATABASES = {
-        'default': {
-            'ENGINE': 'django.db.backends.postgresql_psycopg2',
-            'NAME': 'manifestdb',
-            'USER': 'manifest',
-        },
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'manifestdb',
+        'USER': 'manifest',
+    },
 }
 
 WAGTAILSEARCH_BACKENDS = {
