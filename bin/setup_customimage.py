@@ -440,7 +440,12 @@ def setup_customimage():
     restore_db_tmp()
     #my_log("setval_custom_app_tables()")
     #setval_custom_app_tables()
-    print(f"\nDone\nDo check the file {POPLOG} to see if there where any errors\n")
+    print(
+        f"\nDone\n- Do check the file {POPLOG} to see if there where any errors\n"
+        "- You should rearrange your settings files\n:"
+        f"  - The app {APP} should be appended to INSTALLED_APPS in base.py and "
+        "the WAGTAILIMAGES_IMAGE_MODEL setting should also be in base.py.\n"
+    )
 
 
 if __name__ == '__main__':
