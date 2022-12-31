@@ -1,9 +1,9 @@
-from .base import *
+from .base import *  # noqa
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-SECRET_KEY = env('SECRET_KEY')
+SECRET_KEY = env('SECRET_KEY')  # noqa
 
 # Add your site's domain name(s) here.
 ALLOWED_HOSTS = ['manifest.ncpn.nl']
@@ -14,7 +14,7 @@ ALLOWED_HOSTS = ['manifest.ncpn.nl']
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.ncpn.nl'
 EMAIL_HOST_USER = 'manifest@ncpn.nl'
-EMAIL_HOST_PASSWORD = env('EMAIL_HOST_PASSWORD')
+EMAIL_HOST_PASSWORD = env('EMAIL_HOST_PASSWORD')  # noqa
 EMAIL_POST = 587
 EMAIL_USE_TLS = True
 
@@ -73,7 +73,7 @@ WAGTAILSEARCH_BACKENDS = {
 CACHES = {
     'default': {
         'BACKEND': 'django.core.cache.backends.filebased.FileBasedCache',
-        'LOCATION': os.path.join(BASE_DIR, 'cache'),
+        'LOCATION': os.path.join(BASE_DIR, 'cache'),  # noqa
         'KEY_PREFIX': 'coderedcms',
         'TIMEOUT': 14400, # in seconds
     }
@@ -85,6 +85,6 @@ CACHES = {
 STATICFILES_STORAGE = "whitenoise.storage.CompressedStaticFilesStorage"
 
 # Storage
-MEDIA_URL = "https://%s/" % AWS_S3_CUSTOM_DOMAIN
+MEDIA_URL = "https://%s/" % AWS_S3_CUSTOM_DOMAIN  # noqa
 DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
 AWS_S3_FILE_OVERWRITE = False
