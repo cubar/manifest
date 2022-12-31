@@ -49,8 +49,11 @@ With this setup you will `pip install ...` your python libraries in `~/.virtuale
    `python manage.py runserver` or, a bit shorter: `./manage.py runserver`
 
 - you should see that you need to apply migrations, do that now:<br>
-Kill your development server by typing `<C-C>` and run migrations:<br>
-`./manage.py migrate` Then start your development server again.
+Kill your development server by typing `<C-C>` and then decide if you want to start with an empty database or with a dump of an existing one.
+- - `cat dump_orig.db | python manage.py dbshell` (if you start with a fresh database you can skip this)
+- - `python ./manage makemigration` ( it is important that you do this before applying any migrations)
+- - `./manage.py migrate`
+Then start your development server again.
 
 - Go to `http://localhost:8000/` in your browser, or `http://localhost:8000/admin/` to log in and get to work!
 
